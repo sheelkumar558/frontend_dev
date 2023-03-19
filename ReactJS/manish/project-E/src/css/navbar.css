@@ -1,0 +1,10 @@
+.nav {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links {
+  margin: 10px;
+  font-size: 20px;
+}
