@@ -1,0 +1,71 @@
+
+Quick Recap
+
+CJS->common JS -> const x = require("y"), module.exports -> in our backend curriculum
+ESM Ecma Script Modules -> import x from "y", export "x"
+
+1. Local modules -> calc.js -> sum
+2. The Inbuilt Modules in Node -> os -> node documentation
+3. External packages/modules/third party libraries -> npm -> node package manager -> https://www.npmjs.com/
+
+
+npm install package_name
+
+resume -> JOB
+biodata -> Marriage
+package.json -> Package
+
+A -> pushes index.js,lecture.txt, package.json, package-lock.json
+B <- npm install
+
+package-lock.json -> locks the version/maintains the original version
+
+NPM course -> self learning -> masaischool.com
+
+
+Inbuilt module for Reading and Writing files
+
+
+Ignore node modules before pushing to the Github repo by using .gitignore
+
+In .gitignore file write - node_modules/
+
+
+/n - escape sequence characters
+
+https://nodejs.dev/en/learn/ - study/skim everything except things in Asynchronous work
+   
+
+const fs = require("fs")
+
+
+fs.readFile("./somefile.txt", {encoding : "utf-8"}, (err, data) => {
+        if(err){
+            console.log("Error reading the file")
+            console.log(err)
+        }
+        console.log(data)
+})
+
+
+
+const data = fs.readFileSync("./somefile.txt", {encoding:"utf-8"})
+console.log(data)
+
+
+fs.writeFile("./test.txt", "second hello from index.js", {encoding:"utf-8"}, (err) => {
+    if(err){
+        console.log("Error writing to the file")
+        console.log(err)
+    }
+    console.log("Go check the file now")
+
+})
+
+
+fs.appendFile("./test.txt", "\nfourth hello from index.js\n", {encoding:"utf-8"}, (err) => {
+    if(err){
+        console.log(err)
+    }
+    console.log("check file now")
+})
