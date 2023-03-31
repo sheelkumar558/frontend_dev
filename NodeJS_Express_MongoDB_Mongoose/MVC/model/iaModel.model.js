@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const iaSchema = mongoose.Schema({
-  name: String,
-  course: String,
+  name: { type: String, required: true },
+  course: { type: String, required: true },
 });
 
 const Ia = mongoose.model("ia", iaSchema);
