@@ -4,8 +4,8 @@ Ia;
 const IaRoutes = express.Router();
 
 IaRoutes.get("/", async (req, res) => {
-  const student_data = await Int32Array.find();
-  res.send(student_data);
+  const ia_data = await Ia.find();
+  res.send(ia_data);
 });
 
 module.exports = { IaRoutes };

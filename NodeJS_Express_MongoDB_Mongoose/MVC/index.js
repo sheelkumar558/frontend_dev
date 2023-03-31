@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
-const { connection } = require("./db");
-const Ia = require("./model/iaModel.model");
-const Student = require("./model/studentModel.model");
+const { connection } = require("./config/db");
+
 const { studentRoutes } = require("./routes/student.routes");
 const { IaRoutes } = require("./routes/ia.routes");
+
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("home");
 });

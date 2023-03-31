@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-
+require('dotenv').config()
 const connection = mongoose.connect(
-  "mongodb+srv://sheelu:Sheelu@cluster0.yjnycxw.mongodb.net/test"
+`${process.env.DB}`
 );
 
 module.exports = {
