@@ -1,18 +1,9 @@
 const mongoose = require("mongoose");
 
 const connection = mongoose.connect(
-  "mongodb+srv://sheelu:Sheelu_123@cluster0.vp8ij.mongodb.net/mvc?retryWrites=true&w=majority"
+  "mongodb+srv://sheelu:Sheelu@cluster0.yjnycxw.mongodb.net/test"
 );
-
-const studentSchema = mongoose.Schema({
-  name: String,
-  age: Number,
-  course: String,
-});
-
-const StudentModel = mongoose.model("student", studentSchema);
 
 module.exports = {
   connection,
-  StudentModel,
 };
