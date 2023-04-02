@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/students", studentRoutes);
-app.use("/ia", IaRoutes);
+app.use("/ias", IaRoutes);
 app.listen(8090, async () => {
   try {
     await connection;

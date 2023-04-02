@@ -1,0 +1,14 @@
+Authentication 
+     -->  It is the process of identifying/verifying *who the user is*
+Authorisation 
+        -->
+           It is te process of verifying *who is the user has access to*
+
+Authentication 
+            1.Sign up/Register
+              a. email and password
+              b. store in the database
+            2.Login
+              a. email and password
+              b. check in our database
+                           
