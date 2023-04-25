@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter a Number</h1>
+      <input
+        type="text"
+        id="inputNumber"
+        placeholder="Enter a positive number"
+      />
+      <p id="output"></p>
+    </div>
+  </body>
+</html>
+<script>
+  const inputNumber = document.getElementById("inputNumber");
+  const output = document.getElementById("output");
+
+  inputNumber.addEventListener("input", function () {
+    const number = parseInt(this.value);
+
+    if (number < 0) {
+      output.textContent = "Enter a positive value";
+    } else if (number % 2 === 0) {
+      output.textContent = `${number + 2}, ${number + 4}, ${number + 6}`;
+    } else {
+      output.textContent = `${number + 2}, ${number + 4}, ${number + 6}`;
+    }
+  });
+</script>
